@@ -294,10 +294,12 @@
 <li>下载git<br>官方网址：<a href="http://git-scm.com/downloads" target="_blank" rel="noopener">http://git-scm.com/downloads</a><br>默认安装即可<br>安装成功后测试用命令：git –version</li>
 <li>下载vscode<br>官方网址：<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a><br>默认安装即可，安装完成后添加markdown all插件  </li>
 </ol>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ol>
+<h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><ol>
 <li>在github上新建一个 你的用户名.github.io 的仓库，这一步将允许你在将来通过 http://你的用户名.github.io<br>来访问你的博客</li>
 <li>配置ssh key，要想向git提交代码必须是要有身份证明的，为此我们执行以下配置：   <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></span></pre></td></tr></table></figure>
- 在连续的回车默认安装后，在用户目录下找到  <code>.ssh\id_rsa.pub</code>公钥文件，通过记事本打开后粘贴在github主页<code>个人设置-&gt;SSH and GPG keys-&gt;New SSH key</code>中</li>
+ 在连续的回车默认安装后，在用户目录下找到  <code>.ssh\id_rsa.pub</code>公钥文件，通过记事本打开后粘贴在github主页<code>个人设置-&gt;SSH and GPG keys-&gt;New SSH key</code>中<br> 然后如下配置git：  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> user.name <span class="string">"你的用户名"</span>  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">// github用户名，注意不是昵称</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> user.email  <span class="string">"你的邮箱"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">// 填写github注册邮箱</span></pre></td></tr></table></figure>
+<h2 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h2></li>
+<li></li>
 </ol>
 
       

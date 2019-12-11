@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="Killingchaos">
 <meta property="og:description" content="2019 12 开始学习使用hexo搭建个人博客 tips：博主是在win10系统中部署环境并使用vscode来编写markdown文件  环境准备 下载node.js官方地址:https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;默认安装即可安装成功后测试用命令：node –version 下载git官方网址：http:&#x2F;&#x2F;git-scm.com&#x2F;downloads默认安装即可安装成功后">
 <meta property="article:published_time" content="2019-12-11T09:40:06.347Z">
-<meta property="article:modified_time" content="2019-12-11T10:27:26.229Z">
+<meta property="article:modified_time" content="2019-12-11T10:37:07.310Z">
 <meta property="article:author" content="Killingchaos">
 <meta name="twitter:card" content="summary">
 
@@ -298,10 +298,12 @@
 <li>下载git<br>官方网址：<a href="http://git-scm.com/downloads" target="_blank" rel="noopener">http://git-scm.com/downloads</a><br>默认安装即可<br>安装成功后测试用命令：git –version</li>
 <li>下载vscode<br>官方网址：<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a><br>默认安装即可，安装完成后添加markdown all插件  </li>
 </ol>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ol>
+<h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><ol>
 <li>在github上新建一个 你的用户名.github.io 的仓库，这一步将允许你在将来通过 http://你的用户名.github.io<br>来访问你的博客</li>
 <li>配置ssh key，要想向git提交代码必须是要有身份证明的，为此我们执行以下配置：   <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></span></pre></td></tr></table></figure>
- 在连续的回车默认安装后，在用户目录下找到  <code>.ssh\id_rsa.pub</code>公钥文件，通过记事本打开后粘贴在github主页<code>个人设置-&gt;SSH and GPG keys-&gt;New SSH key</code>中</li>
+ 在连续的回车默认安装后，在用户目录下找到  <code>.ssh\id_rsa.pub</code>公钥文件，通过记事本打开后粘贴在github主页<code>个人设置-&gt;SSH and GPG keys-&gt;New SSH key</code>中<br> 然后如下配置git：  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> user.name <span class="string">"你的用户名"</span>  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">// github用户名，注意不是昵称</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> user.email  <span class="string">"你的邮箱"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">// 填写github注册邮箱</span></pre></td></tr></table></figure>
+<h2 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h2></li>
+<li></li>
 </ol>
 
       
@@ -314,7 +316,7 @@
         <p><span>本文标题:</span><a href="/2019/12/11/2019.12/">2019.12</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Killingchaos</a></p>
         <p><span>发布时间:</span>2019-12-11, 17:40:06</p>
-        <p><span>最后更新:</span>2019-12-11, 18:27:26</p>
+        <p><span>最后更新:</span>2019-12-11, 18:37:07</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/12/11/2019.12/" title="2019.12">http://yoursite.com/2019/12/11/2019.12/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/12/11/2019.12/　　作者: Killingchaos" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -344,7 +346,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2019-12-开始学习使用hexo搭建个人博客"><span class="toc-number">1.</span> <span class="toc-text">2019 12 开始学习使用hexo搭建个人博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境准备"><span class="toc-number">1.1.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-number">1.2.</span> <span class="toc-text">配置</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2019-12-开始学习使用hexo搭建个人博客"><span class="toc-number">1.</span> <span class="toc-text">2019 12 开始学习使用hexo搭建个人博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境准备"><span class="toc-number">1.1.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git配置"><span class="toc-number">1.2.</span> <span class="toc-text">git配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo配置"><span class="toc-number">1.3.</span> <span class="toc-text">hexo配置</span></a></li></ol></li></ol>
         
     </div>
     <style>
