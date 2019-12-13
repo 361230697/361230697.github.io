@@ -289,19 +289,25 @@
         <h1 id="2019-12-开始学习使用hexo搭建个人博客"><a href="#2019-12-开始学习使用hexo搭建个人博客" class="headerlink" title="2019 12 开始学习使用hexo搭建个人博客"></a>2019 12 开始学习使用hexo搭建个人博客</h1><ul>
 <li>tips：博主是在win10系统中部署环境并使用vscode来编写markdown文件</li>
 </ul>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ol>
-<li>下载node.js<br>官方地址:<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a><br>默认安装即可<br>安装成功后测试用命令：node –version</li>
-<li>下载git<br>官方网址：<a href="http://git-scm.com/downloads" target="_blank" rel="noopener">http://git-scm.com/downloads</a><br>默认安装即可<br>安装成功后测试用命令：git –version</li>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><ol>
+<li>下载node.js<br>官方地址:<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a><br>默认安装即可<br>安装后查看版本测试安装是否成功：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">node --version</span></pre></td></tr></table></figure></li>
+<li>下载git<br>官方网址：<a href="http://git-scm.com/downloads" target="_blank" rel="noopener">http://git-scm.com/downloads</a><br>默认安装即可<br>安装后查看版本测试安装是否成功：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git --version</span></pre></td></tr></table></figure></li>
 <li>下载vscode<br>官方网址：<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a><br>默认安装即可，安装完成后添加markdown all插件  </li>
 </ol>
-<h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><ol>
+<h3 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h3><ol>
 <li>在github上新建一个 你的用户名.github.io 的仓库，这一步将允许你在将来通过 http://你的用户名.github.io<br>来访问你的博客</li>
 <li>配置ssh key，要想向git提交代码必须是要有身份证明的，为此我们执行以下配置：   <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></span></pre></td></tr></table></figure>
  在连续的回车默认安装后，在用户目录下找到  <code>.ssh\id_rsa.pub</code>公钥文件，通过记事本打开后粘贴在github主页<code>个人设置-&gt;SSH and GPG keys-&gt;New SSH key</code>中<br> 然后如下配置git：  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> user.name <span class="string">"你的用户名"</span>  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">// github用户名，注意不是昵称</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> user.email  <span class="string">"你的邮箱"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">// 填写github注册邮箱</span></pre></td></tr></table></figure>
-<h2 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h2></li>
-<li></li>
+<h3 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h3></li>
+<li>下载hexo<figure class="highlight v"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo -v<span class="comment">//查看版本测试安装是否成功</span></span></pre></td></tr></table></figure></li>
+<li>进入自己想要安放文件的路径执行安装：  <figure class="highlight v"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo init<span class="comment">//请保证路径尽量为空</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo s<span class="comment">//在本地4000端口查看</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git<span class="comment">//安装插件</span></span></pre></td></tr></table></figure>
+修改目录中<code>_config.yml</code>配置文件<figure class="highlight v"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span>: git<span class="comment">//注意：后需要添加空格</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">repo: 仓库地址</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">branch: master</span></pre></td></tr></table></figure>
+<h2 id="上传命令"><a href="#上传命令" class="headerlink" title="上传命令"></a>上传命令</h2><figure class="highlight v"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo g<span class="comment">//生成静态页面</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo d<span class="comment">//上传到git</span></span></pre></td></tr></table></figure>
+接着就可以通过<code>用户名.github.io</code>来访问自己的博客啦</li>
 </ol>
-
+<h2 id="博客更新"><a href="#博客更新" class="headerlink" title="博客更新"></a>博客更新</h2><h3 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h3><p><code>/source/_posts</code></p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p><code>/theme</code>是用来存放主题的目录，可以前往 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a> 下载，将下载的主题移到文件夹下后，修改<code>_config.yml</code>配置文件  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">theme:主题名</span></pre></td></tr></table></figure>
       
     </div>
     
